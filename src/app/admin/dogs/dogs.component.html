@@ -1,0 +1,12 @@
+<p>Images dogs</p>
+<div class="image-container">
+  <img *ngIf="dogImageUrl" [src]="dogImageUrl" alt="Random Dog Image" class="dog-image">
+  <button (click)="fetchNewDogImage()" class="fetch-button">Get New Image</button>
+</div>
+<div class="textarea-container">
+  <textarea [(ngModel)]="textAreaContent" appWhiteSpace class="text-area"></textarea>
+  <div class="output-container">
+    <p>Without whitespace:</p>
+    <div class="output">{{ textAreaContent }}</div>
+  </div>
+</div>
