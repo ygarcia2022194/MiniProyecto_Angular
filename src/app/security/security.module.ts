@@ -1,23 +1,19 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SecurityRoutingModule } from './security-routing.module';
 import { LoginComponent } from './login/login.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
-import { SocialLoginModule } from '@abacritt/angularx-social-login';
-import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
-
-
+import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider
+} from '@abacritt/angularx-social-login';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     LoginComponent
   ],
   imports: [
     CommonModule,
-    SecurityRoutingModule,
-    BrowserModule,
-    ReactiveFormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    HttpClientModule
   ],
   providers:[
     {
@@ -27,12 +23,18 @@ import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('915685675307-blfa747l8aoancfnu8694tlmljh7vh2s.apps.googleusercontent.com'),
-          },
+            provider: new GoogleLoginProvider(
+              '105937120392-s64pft5uv8mupkavl6smkk8bq7jgb65l.apps.googleusercontent.com'
+            )
+          }
         ],
-      } as SocialLoginModule,
-    },
+        onError: (err) => {
+          console.error(err);
+        }
+      } as SocialAuthServiceConfig,
+    }
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[
     LoginComponent
   ]

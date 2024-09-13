@@ -96,13 +96,26 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "2bb98c3a-acb3-4af7-81a0-7555fed83ab1"
+    "analytics": "2bb98c3a-acb3-4af7-81a0-7555fed83ab1",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

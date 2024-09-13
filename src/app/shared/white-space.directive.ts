@@ -5,10 +5,10 @@ import { Directive, ElementRef,HostListener } from '@angular/core';
 })
 export class WhiteSpaceDirective {
 
-  constructor(private el: ElementRef) { }
+  constructor(private element: ElementRef) { }
 
   @HostListener('blur') onBlur() {
-    const element = this.el.nativeElement as HTMLTextAreaElement;
+    const element = this.element.nativeElement as HTMLTextAreaElement;
     if (element) {
       element.value = element.value.trim();
     }
