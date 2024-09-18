@@ -1,3 +1,4 @@
+
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,7 +13,6 @@ export class LoginComponent{
   user: any;
   loggedIn: any;
 
-  // Inyecta el Router en el constructor
   constructor(private authService: SocialAuthService, private router: Router) { }
 
   ngOnInit() {

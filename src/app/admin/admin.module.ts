@@ -1,26 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AdminRoutingModule } from './admin-routing.module';
 import { DogsComponent } from './dogs/dogs.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from '../shared/shared.module';
+import { WhiteSpaceDirective } from '../shared/directives/white-space.directive';
 
 
 @NgModule({
   declarations: [
-    DogsComponent
+    DogsComponent, WhiteSpaceDirective
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    SharedModule 
-  ],
-  exports:[
-    DogsComponent
+    FormsModule
   ]
 })
 export class AdminModule { }

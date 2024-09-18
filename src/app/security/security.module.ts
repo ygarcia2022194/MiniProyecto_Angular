@@ -6,6 +6,7 @@ import {
   GoogleLoginProvider
 } from '@abacritt/angularx-social-login';
 import { HttpClientModule } from '@angular/common/http';
+import { SecurityRoutingModule } from './security-routing.module';
 @NgModule({
   declarations: [
     LoginComponent
@@ -13,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     SocialLoginModule,
-    HttpClientModule
+    HttpClientModule,
+    SecurityRoutingModule
   ],
   providers:[
     {

@@ -4,8 +4,11 @@ import { DogsComponent } from './dogs/dogs.component';
 
 const routes: Routes = [
   {
-    path: 'dogs',
-    component: DogsComponent
+    path: '',
+    children:[
+      { path: '', component: DogsComponent},
+      { path: '**', redirectTo: ''}
+    ]
   }
 ];
 
