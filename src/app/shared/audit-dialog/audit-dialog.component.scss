@@ -1,0 +1,31 @@
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+  
+    .audit-section {
+      text-align: center;
+      margin-bottom: 20px;
+      
+      h3 {
+        font-weight: bold;
+        color: #0a0a57; 
+      }
+  
+      p {
+        margin: 5px 0;
+        color: #000;
+      }
+    }
+  
+    .close-button {
+      background-color: #0a0a57;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="dialog-content">
+    <div class="audit-section">
+      <h3>Auditoría Creación</h3>
+      <p><strong>Usuario:</strong> {{ data.UserCreated }}</p>
+      <p><strong>Fecha:</strong> {{ data.DateCreated | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+    </div>
+  
+    <div class="audit-section">
+      <h3>Última Modificación</h3>
+      <p><strong>Usuario:</strong> {{ data.UserUpdated }}</p>
+      <p><strong>Fecha:</strong> {{ data.DateUpdated | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+    </div>
+  
+    <button mat-button class="close-button" (click)="close()">Cerrar</button>
+</div>
