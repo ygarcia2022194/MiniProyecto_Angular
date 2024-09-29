@@ -9,7 +9,7 @@ import { DogsService } from '../services/dogs.service';
 })
 export class DogsComponent implements OnInit{
   dogImageUrl: string | undefined;
-  textAreaContent: string = '';
+  textAreaContent: string  | undefined;
 
   constructor(private dogsService: DogsService) {}
 

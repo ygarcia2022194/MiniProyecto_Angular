@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DogsComponent } from '../admin/dogs/dogs.component';
+import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
   {
-    path: "dogs",
-    component: DogsComponent
+    path: '',
+    children: [
+      { path: '', component: LoginComponent },
+      { path: '**', redirectTo: '' }
+    ]
   }
 ];
 
